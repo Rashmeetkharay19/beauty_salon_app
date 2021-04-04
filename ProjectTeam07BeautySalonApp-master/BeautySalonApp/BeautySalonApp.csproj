@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C63AB412-FA9D-4E5D-BA64-23DC8BFB2593}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BeautySalonApp</RootNamespace>
+    <AssemblyName>BeautySalonApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddInventoryProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInventoryProductForm.Designer.cs">
+      <DependentUpon>AddInventoryProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrUpdateClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrUpdateClientsForm.Designer.cs">
+      <DependentUpon>AddOrUpdateClientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddServiceForm.Designer.cs">
+      <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BackUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackUpForm.Designer.cs">
+      <DependentUpon>BackUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeautySalonMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeautySalonMainForm.Designer.cs">
+      <DependentUpon>BeautySalonMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeautySalonProgram.cs" />
+    <Compile Include="DeleteAppointmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteAppointmentsForm.Designer.cs">
+      <DependentUpon>DeleteAppointmentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentScreen.Designer.cs">
+      <DependentUpon>PaymentScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportScreen.Designer.cs">
+      <DependentUpon>ReportScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServicesForm.Designer.cs">
+      <DependentUpon>ServicesForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddInventoryProductForm.resx">
+      <DependentUpon>AddInventoryProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrUpdateClientsForm.resx">
+      <DependentUpon>AddOrUpdateClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddServiceForm.resx">
+      <DependentUpon>AddServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BackUpForm.resx">
+      <DependentUpon>BackUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeautySalonMainForm.resx">
+      <DependentUpon>BeautySalonMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteAppointmentsForm.resx">
+      <DependentUpon>DeleteAppointmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ServicesForm.resx">
+      <DependentUpon>ServicesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BeautySalonCodeFirstFromDB\BeautySalonCodeFirstFromDB.csproj">
+      <Project>{cb23321d-3c95-4131-9b2b-3771381fbe7f}</Project>
+      <Name>BeautySalonCodeFirstFromDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BeautySalonDB\BeautySalonDB.sqlproj">
+      <Project>{424885d6-2523-465f-8625-8933f169f403}</Project>
+      <Name>BeautySalonDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BeautySalonValidation\BeautySalontValidation.csproj">
+      <Project>{3afe45b0-ea7a-411c-8004-efef651b0bd1}</Project>
+      <Name>BeautySalontValidation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataTableAccessLayer\DataTableAccessLayer.csproj">
+      <Project>{62046f68-706d-4350-82d1-c205f0ec64de}</Project>
+      <Name>DataTableAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFControllerUtilities\EFControllerUtilities.csproj">
+      <Project>{f7b44d6d-563a-4d6d-9718-b554924b4d97}</Project>
+      <Name>EFControllerUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeautySalon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeautySalon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeautySalon11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BeautySalon12.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
